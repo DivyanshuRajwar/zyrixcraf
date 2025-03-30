@@ -2,9 +2,9 @@ import React from "react";
 import Iphone from "../assets/iphone01.png";
 import laptop from "../assets/laptop01.png";
 import { motion } from "framer-motion";
-function ShowCase() {
+function ShowCase({overlayOn,setOverlay}) {
   return (
-    <div className="w-screen h-screen bg-black flex flex-col justify-between pb-10 items-center text-white relative">
+    <div id="Portfolio" className="w-screen h-screen bg-black flex flex-col justify-between pb-10 items-center text-white relative">
       {/* Top Section */}
       <div className="w-[80%] h-[30%] flex justify-between items-center">
         <div className="w-[70%]">
@@ -65,8 +65,8 @@ function ShowCase() {
           </span>
         </div>
         <div className="w-[30%] flex justify-center items-center gap-10">
-            <button className="bg-gray-400 rounded-3xl p-3 text-lg text-black hover:cursor-pointer ">Check Our PortFolio</button>
-            <button className="bg-[#695a5a93] rounded-3xl p-3 text-lg  text-white hover:cursor-pointer">Get in Touch</button>
+            <button className="bg-gray-400 rounded-3xl p-3 text-lg text-black hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Check Our PortFolio</button>
+            <button onClick={()=> setOverlay(!overlayOn)} className="bg-[#695a5a93] rounded-3xl p-3 text-lg  text-white hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Get in Touch</button>
         </div>
       </div>
 

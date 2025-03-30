@@ -1,127 +1,108 @@
-import React from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
-import RotatingText from './RotatingText';
-import '../styles/RotatingText.css';
-
-function Services() {
-  const services = [
-    {
-      title: 'Professional Training & Development',
-      description: 'Empower your team with cutting-edge skills and knowledge.',
-      features: [
-        'Custom Training Programs',
-        'Professional Development Workshops',
-        'Leadership Training',
-        'Technical Skills Development',
-        'Team Building Activities',
-        'Performance Assessment'
-      ]
-    },
-    {
-      title: 'Website Development',
-      description: 'Create modern, responsive websites tailored to your needs.',
-      features: [
-        'Custom Web Applications',
-        'E-commerce Solutions',
-        'CMS Integration',
-        'Responsive Design',
-        'SEO Optimization',
-        'Website Maintenance & Support'
-      ]
-    },
-    {
-      title: 'UI/UX Design',
-      description: 'Design intuitive and engaging user experiences.',
-      features: [
-        'User Research',
-        'Wireframing',
-        'Prototyping',
-        'User Testing',
-        'Mobile & Web App Design',
-        'Dark Mode & Adaptive UI'
-      ]
-    },
-    {
-      title: 'Graphic Design',
-      description: 'Create stunning visuals that capture your brand essence.',
-      features: [
-        'Logo Design',
-        'Brand Identity',
-        'Marketing Materials',
-        'Social Media Graphics',
-        'Motion Graphics & Animation',
-        'Product Packaging Design'
-      ]
-    },
-    {
-      title: 'Digital Marketing',
-      description: 'Boost your online presence with strategic marketing solutions.',
-      features: [
-        'SEO & SEM Optimization',
-        'Content Marketing',
-        'Social Media Management',
-        'PPC Advertising',
-        'Email Marketing',
-        'Conversion Rate Optimization'
-      ]
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Develop high-performance mobile apps tailored to your business needs.',
-      features: [
-        'iOS & Android Development',
-        'Cross-Platform Solutions',
-        'App UI/UX Design',
-        'Performance Optimization',
-        'App Maintenance & Support',
-        'Push Notifications & Analytics'
-      ]
-    }
-  ];
-
+import React from "react";
+import webPic from "../assets/web.avif";
+import uiUx from "../assets/ui-ux.avif";
+import graphic from "../assets/graphics.avif";
+import '../styles/AllCompo.css'
+function Services( {overlayOn, setOverlay}) {
   return (
-    <div className='bg-white/5 backdrop-blur-lg w-[95%] min-h-screen flex flex-col gap-10 pb-20 pt-20 items-center text-gray-800'>
-      <h2 className='text-4xl font-bold mb-4 text-center text-gray-700'>Our Services</h2>
-      <p className='text-gray-600 max-w-2xl text-center mb-8'>We provide a wide range of digital solutions to help your business grow and succeed in the online world.</p>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl px-4'>
-        {services.map((service, index) => (
-          <div key={index} className='bg-white/30 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300 border border-white/20'>
-            <h3 className='text-2xl font-semibold mb-4 text-gray-700'>
-              <RotatingText
-                texts={[service.title]}
-                splitBy="characters"
-                staggerDuration={0.03}
-                rotationInterval={4000}
-                transition={{ type: "spring", damping: 20, stiffness: 180 }}
-              />
-            </h3>
-            <p className='text-gray-600 mb-6'>
-              <RotatingText
-                texts={[service.description]}
-                splitBy="words"
-                staggerDuration={0.05}
-                rotationInterval={4000}
-                transition={{ type: "spring", damping: 15, stiffness: 150 }}
-              />
+    <div id="services"
+      className="w-[95%] min-h-screen flex flex-col items-center rounded-4xl 
+  shadow-[10px_10px_30px_rgba(0,0,0,0.3),-10px_-10px_30px_rgba(255,255,255,0.2)]
+  bg-gradient-to-br from-gray-100 to-gray-300 border-none mb-2"
+    >
+      <div className="w-full h-[30%] p-5   ">
+        <h3 className=" text-4xl text-gray-400 font-bold ">Our Services</h3>
+        <h2 className=" text-4xl mt-3 font-sans w-[1000px] text-gray-400 ">
+          We are a passionate team dedicated to designing stunning websites,
+          captivating graphics, and seamless UI/UX experiences that leave a
+          lasting impact.
+        </h2>
+      </div>
+      <div className="w-full h-[70%] p-5  flex gap-2  ">
+        <div onClick={()=> setOverlay(!overlayOn)} className="w-[450px] relative overflow-hidden rounded-4xl  ">
+          <div
+            className="absolute z-1 w-full h-full p-5 flex flex-col gap-5 text-[#ffffff] 
+  bg-[#3a383883] rounded-4xl font-serif 
+  hover:bg-[#0c0c0cbe] hover:cursor-pointer transition-colors duration-300 ease-in-out"
+          >
+            <span className=" text-[45px] font-bold   ">
+              WEB <br /> DEVELOPMENT
+            </span>
+            <p className="mt-12 text-[18px] font-sans ">
+              We craft responsive and unique web designs that captivate
+              audiences, ensuring seamless performance across all devices. From
+              SEO optimization to reliable hosting, we deliver complete digital
+              solutions tailored to your success.
             </p>
-            <ul className='space-y-3'>
-              {service.features.map((feature, idx) => (
-                <li key={idx} className='flex items-center space-x-2'>
-                  <FaCheckCircle className='text-gray-500' />
-                  <span className='text-gray-700'>
-                    <RotatingText
-                      texts={[feature]}
-                      splitBy="words"
-                      staggerDuration={0.04}
-                      rotationInterval={3500}
-                      transition={{ type: "spring", damping: 18, stiffness: 160 }}
-                    />
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <hr></hr>
+            <div className="flex gap-2">
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">ReactJs</span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">
+                ExpressJs
+              </span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">MongoDb</span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">FireBase</span>
+            </div>
           </div>
-        ))}
+          <img
+            src={webPic}
+            alt=""
+            className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
+            style={{ animation: "scaleAnimation 10s ease-in-out infinite" }}
+          />
+        </div>
+        <div onClick={()=> setOverlay(!overlayOn)} className="w-[450px] relative  overflow-hidden rounded-4xl ">
+          <div
+            className="absolute z-1 w-full h-full p-5 flex flex-col gap-5 text-[#ffffff] 
+  bg-[#3a383883] rounded-4xl font-serif 
+  hover:bg-[#0c0c0cbe] hover:cursor-pointer transition-colors duration-300 ease-in-out"
+          >
+            <span className=" text-[45px] font-bold   ">UI/UX</span>
+            <p className="mt-[115px] text-[18px] font-sans ">
+              We design intuitive and visually stunning UI/UX experiences that
+              enhance user engagement across all devices. From seamless
+              navigation to accessibility and performance, we create digital
+              experiences that leave a lasting impact.
+            </p>
+            <hr></hr>
+            <div className="flex gap-2">
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">Figma </span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">Adobe XD</span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">Framer </span>
+            </div>
+          </div>
+          <img src={uiUx} alt="" className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
+            style={{ animation: "scaleAnimation 10s ease-in-out infinite" }} />
+        </div>
+        <div onClick={()=> setOverlay(!overlayOn)} className="w-[450px] relative  overflow-hidden rounded-4xl  ">
+          <div
+            className="absolute z-1 w-full h-full p-5 flex flex-col gap-5 text-[#ffffff] 
+  bg-[#3a383883] rounded-4xl font-serif 
+  hover:bg-[#0c0c0cbe] hover:cursor-pointer transition-colors duration-300 ease-in-out"
+          >
+            <span className=" text-[45px] font-bold uppercase  ">
+              graphic designs
+            </span>
+            <p className="mt-12 text-[18px] font-sans ">
+              We create visually compelling and unique graphic designs that
+              captivate audiences and elevate your brand identity. From logos to
+              marketing materials, we craft designs that blend creativity with
+              strategy for maximum impact.
+            </p>
+            <hr></hr>
+            <div className="flex gap-2">
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">
+                Adobe Photoshop
+              </span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">
+                CorelDRAW{" "}
+              </span>
+              <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">Canva </span>
+            </div>
+          </div>
+          <img src={graphic} alt="" className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
+            style={{ animation: "scaleAnimation 10s ease-in-out infinite" }} />
+        </div>
       </div>
     </div>
   );

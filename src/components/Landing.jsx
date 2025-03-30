@@ -11,7 +11,7 @@ import Hash from "../assets/Hash.png";
 import Cube from "../assets/Cube.png";
 function Landing() {
   return (
-    <div className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative mt-2 ">
+    <div id="home" className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative mt-2 ">
       
       <div className="w-full h-full border-none  ">
         <video
@@ -50,11 +50,6 @@ function Landing() {
               <div className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#4541f1] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></div>
             </div>
           </div>
-          {/* <div className=" w-[470px] h-[80px] flex items-center justify-end ml-[90px] ">
-            <div className="w-[60px] h-[60px] rounded-full bg-[#cfc4c48e] backdrop-blur-lg shadow-lg flex justify-center items-center border border-white/20">
-              <i className="fi fi-br-bars-staggered text-2xl text-black cursor-pointer"></i>
-            </div>
-          </div> */}
         </div>
         <div className="w-full h-full  flex  ">
           <div className="w-1/2 h-[100%]  pt-[50px] pl-10 flex flex-col   ">
@@ -64,7 +59,7 @@ function Landing() {
 
             <div className="flex justify-end items-center w-[80%] gap-10 h-[30%]  ">
               <div className="w-[90px] h-[90px] rounded-full bg-[#4441f1b4] hover:bg-[#4541f1] hover:text-white cursor-pointer bg-opacity-20 backdrop-blur-lg shadow-lg flex justify-center items-center ">
-                <i class="fi fi-br-arrow-down text-4xl "></i>
+                <i  class="fi fi-br-arrow-down text-4xl "></i>
               </div>
               {/* <img src={Epic} alt="pic" width={"350px"} /> */}
               <span className="text-[150px] font-bold "   >Epic</span>
@@ -83,20 +78,20 @@ function Landing() {
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
             />
-            <div className="w-[40%] h-[50%]  absolute top-15 right-0 z-1  ">
-              <span className="absolute right-[145px] top-[40px] text-[25px] ">
+            <div className="w-[40%] h-[50%]  absolute top-15 right-0 z-1 font-sans ">
+              <span className="absolute right-[145px] top-[40px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
                 Home
               </span>
-              <span className="absolute right-[175px] top-[90px] text-[25px] ">
+              <span className="absolute right-[175px] top-[90px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
                 Services
               </span>
-              <span className="absolute right-[185px] top-[140px] text-[25px]">
+              <span className="absolute right-[185px] top-[140px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
                 Project
               </span>
-              <span className="absolute right-[172px] top-[190px] text-[25px] ">
+              <span className="absolute right-[172px] top-[190px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
                 Contact
               </span>
-              <span className="absolute right-[150px] top-[240px] text-[25px]">
+              <span className="absolute right-[150px] top-[240px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
                 About Us
               </span>
             </div>
