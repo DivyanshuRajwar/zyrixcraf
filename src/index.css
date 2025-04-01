@@ -11,3 +11,30 @@ body{
       }
       
 }
+.neon-icon {
+  font-size: 30px;  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;  
+  height: 60px;  
+  color:#000;
+
+  /* Glassmorphism Effect */
+ 
+  border: 1px solid rgba(255, 255, 255, 0.767); /* Soft border */
+  background: #ebe8e8b6;
+  /* Drop Shadow */
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+
+  /* Border Shape */
+  border-radius: 50%;   
+
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.neon-icon:hover {
+  transform: scale(1.05);  
+  color:white;
+  background: rgba(7, 7, 7, 0.486); /* Subtle color change */
+}

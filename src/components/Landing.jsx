@@ -9,7 +9,7 @@ import Orb from "../assets/3dorb.png";
 import Plus from "../assets/Plus.png";
 import Hash from "../assets/Hash.png";
 import Cube from "../assets/Cube.png";
-function Landing() {
+function Landing({hamb}) {
   return (
     <div id="home" className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative mt-2 ">
       
@@ -78,23 +78,24 @@ function Landing() {
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
             />
-            <div className="w-[40%] h-[50%]  absolute top-15 right-0 z-1 font-sans ">
-              <span className="absolute right-[145px] top-[40px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
-                Home
+            {hamb ? (<div className="w-[40%] h-[50%]  absolute top-15 right-0 z-1 font-sans ">
+              <span className="absolute right-[147px] top-[25px] text-[25px] hover:cursor-pointer hover:scale-[1.1]  transition-all duration-300 ">
+              <i class="fi fi-rr-home neon-icon"></i>
               </span>
-              <span className="absolute right-[175px] top-[90px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
-                Services
+              <span className="absolute right-[176px] top-[100px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
+              <i class="fi fi-br-customer-care neon-icon"></i>
               </span>
-              <span className="absolute right-[185px] top-[140px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                Project
+              <span className="absolute right-[182px] top-[170px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
+              <i class="fi fi-rr-edit-alt neon-icon"></i>
               </span>
-              <span className="absolute right-[172px] top-[190px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                Contact
+              <span className="absolute right-[165px] top-[235px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
+              <i class="fi fi-rr-users-alt neon-icon"></i>
               </span>
-              <span className="absolute right-[150px] top-[240px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                About Us
+              <span className="absolute right-[130px] top-[290px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
+              <i class="fi fi-rr-phone-guide neon-icon "></i>
               </span>
-            </div>
+            </div>):(<> </>)}
+            
             <motion.img
               src={Plus}
               alt="plus"

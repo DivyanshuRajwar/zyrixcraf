@@ -15,10 +15,13 @@ const AnimatedImage = ({ src, alt, size }) => (
     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
   />
 );
+// useEffect(() => {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// }, []);
 
 const UiUxPortfolio = () => {
   return (
-    <div className="w-full min-h-screen bg-black text-white overflow-hidden">
+    <div className="w-full  min-h-screen bg-black text-white overflow-hidden">
       <header className="flex flex-col items-center py-16">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
