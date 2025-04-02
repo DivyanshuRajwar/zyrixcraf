@@ -14,7 +14,7 @@ function App() {
         <CursorDot />
         <Routes>
           <Route path="/" element={<Wrapper />} />
-          <Route path="/ui-ux" element={<UiUxPortfolio />} />
+          {/* <Route path="/ui-ux" element={<UiUxPortfolio />} /> */}
         </Routes>
       </div>
     </Router>

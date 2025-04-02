@@ -15,9 +15,7 @@ const AnimatedImage = ({ src, alt, size }) => (
     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
   />
 );
-// useEffect(() => {
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-// }, []);
+
 
 const UiUxPortfolio = () => {
   return (

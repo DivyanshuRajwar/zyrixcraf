@@ -12,6 +12,7 @@ import iphone10 from "../assets/10.webp";
 import iphone11 from "../assets/11.webp";
 import iphone12 from "../assets/12.webp";
 import Hand from "../assets/hand.webp";
+
 import HandCompo from "./HandCompo";
 
 function ShowCase2() {

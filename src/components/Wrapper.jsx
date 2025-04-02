@@ -51,6 +51,7 @@ function Wrapper() {
       <LatestCases />
       <OurTeam />
       <Footer overlayOn={overlayOn} setOverlay={setOverlay} />
+      
       {overlayOn && <ClientHome setOverlay={setOverlay} />}
     </div>
   );

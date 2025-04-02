@@ -20,7 +20,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center gap-9 text-white p-10 bg-[#070129] relative overflow-hidden  ">
+    <div id="team" className="w-full h-screen flex flex-col justify-center items-center gap-9 text-white p-10 bg-[#070129] relative overflow-hidden  ">
       
       <div className="text-center w-full">
         <h1 className="text-5xl font-bold mb-4">Our Team</h1>

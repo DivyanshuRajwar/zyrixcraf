@@ -1,23 +1,22 @@
-import React from 'react'
+import React from "react";
 import Hand from "../assets/hand.webp";
-import eComm from '../assets/eComm.mp4'
+import laptop from "../assets/macbook-pro.png";
+import eComm from "../assets/0401.mp4";
 function HandCompo() {
   return (
-    <div className='relative   min-w-full min-h-[1850px]   '>
-        <div className='sticky h-full w-full top-0 left-[150px]'> 
-
-        <img src={Hand}  alt="" />
-        <video 
-            src={eComm} 
-            autoPlay 
-            loop 
-            muted 
-            className="w-[295px] absolute top-[38px] left-[40%] rounded-[40px] h-[600px]  object-cover "
-          />
-        </div>
-        
+    <div className="relative   min-w-full min-h-[1850px]   ">
+      <div className="sticky h-full w-full top-10    ">
+        <img src={laptop} alt="laptop"  className=" w-[750px]   mt-5 ml-[350px]" />
+        <video
+          src={eComm}
+          autoPlay
+          loop
+          muted
+          className="w-[590px] h-[380px] rounded-2xl absolute top-[20px] left-[430px]   object-cover "
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default HandCompo
+export default HandCompo;

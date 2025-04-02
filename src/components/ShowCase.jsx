@@ -33,7 +33,7 @@ function ShowCase({overlayOn,setOverlay}) {
           <motion.img
             src={laptop}
             alt="Laptop"
-            className="h-[450px] absolute top-20 left-[250px]"
+            className="h-[250px] absolute top-50 left-[280px]"
             animate={{ y: [0, -20, 0] }} 
             transition={{
               duration: 5, 
@@ -65,7 +65,7 @@ function ShowCase({overlayOn,setOverlay}) {
           </span>
         </div>
         <div className="w-[30%] flex justify-center items-center gap-10">
-            <button className="bg-gray-400 rounded-3xl p-3 text-lg text-black hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Check Our PortFolio</button>
+            <button  onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}  className="bg-gray-400 rounded-3xl p-3 text-lg text-black hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Check Our PortFolio</button>
             <button onClick={()=> setOverlay(!overlayOn)} className="bg-[#695a5a93] rounded-3xl p-3 text-lg  text-white hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Get in Touch</button>
         </div>
       </div>

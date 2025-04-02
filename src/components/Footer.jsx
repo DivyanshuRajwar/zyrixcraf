@@ -1,139 +1,117 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import ClientHome from "./ClientHome";
-import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import React from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaWhatsapp,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = ({ overlayOn, setOverlay }) => {
-  
+  const socialLinks = [
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/zyrixcraft?igsh=dWE0d2Vwbmx4NjBm",
+    },
+    { icon: FaGithub, link: "https://github.com/zyrixcraft" },
+    { icon: FaWhatsapp, link: "https://wa.me/919711625392" }, // Proper WhatsApp link format
+    {
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/zyrixcraft-in-11b338359/",
+    },
+  ];
   return (
-    <div className="w-screen">
-      <footer className="bg-gray-100 py-14 font-[Poppins] relative">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between px-8 lg:px-24 gap-16">
-          <div className="mb-10 md:mb-0 md:w-1/3">
-            <h1 className="text-4xl font-bold mb-6 text-gray-900">
+    <div id="footer" className="w-full">
+      <footer className="bg-gray-100 py-[3.5em] font-[Poppins] relative">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between px-[5%] gap-[4em]">
+          <div className="mb-[1.5em] md:mb-0 md:w-[30%]">
+            <h1 className="text-[2.2em] font-bold mb-[1em] text-gray-900">
               We would love to hear from you.
             </h1>
-            <p className="mb-6 text-md text-gray-600">
+            <p className="mb-[1em] text-[1.2em] text-gray-600">
               Feel free to reach out if you want to collaborate with us, or
               simply have a chat.
             </p>
             <button
               onClick={() => setOverlay(!overlayOn)}
-              className="bg-[#4541f1] text-white font-semibold text-md py-3 px-6 rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out "
+              className="bg-[#4541f1] text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
             >
               Become a Client
             </button>
-            <p className="mt-6 text-sm text-gray-500">
+            <p className="mt-[1.5em] text-[0.95em] text-gray-500">
               Don’t like the forms? Drop us a line via email.
             </p>
-            <p className="text-md text-gray-700 font-medium">
+            <a
+              href="mailto:zyrixcraft@gmail.com"
+              className="text-[1em] text-gray-700 font-medium hover:text-blue-600"
+            >
               Zyrixcraft@gmail.com
-            </p>
+            </a>
           </div>
 
-          <div className="flex flex-col md:flex-row md:space-x-16 w-full md:w-2/3 gap-16">
-            <div className="mb-10 md:mb-0 w-[500px]">
-              <h2 className="font-semibold text-2xl text-gray-900 mb-4">
+          <div className="flex flex-col md:flex-row md:space-x-[4em] w-full md:w-[70%] gap-[4em]">
+            <div className="w-[50%]">
+              <h2 className="font-semibold text-[1.5em] text-gray-900 mb-[1em]">
                 Contact us
               </h2>
-              <p className="text-md text-gray-600">
+              <p className="text-[1em] text-gray-600">
                 Email:{" "}
-                <a href="mailto:Zyrix@gmail.com" className="text-blue-600">
-                  Zyrix@gmail.com
+                <a href="mailto:zyrixcraft@gmail.com" className="text-blue-600">
+                  zyrixcraft@gmail.com
                 </a>
               </p>
-              <p className="text-md text-gray-600">
+              <p className="text-[1em] text-gray-600">
                 Phone:{" "}
                 <span className="text-gray-700 font-medium">
-                  +1 (628) 800-77-09
+                  +19 97116 25392
                 </span>
               </p>
-              <p className="text-md text-gray-600">
-                San Francisco, CA, 2 Embarcadero Center, 8th floor, 94111
+              <p className="text-[1em] text-gray-600">
+                New Delhi - 110044, Near Union Bank aali village
               </p>
             </div>
 
-            <div className="mb-10 md:mb-0 w-1/3">
-              <h2 className="font-semibold text-2xl text-gray-900 mb-4">
+            <div className="w-[30%]">
+              <h2 className="font-semibold text-[1.5em] text-gray-900 mb-[1em]">
                 Follow us
               </h2>
-              <div className="flex flex-col space-y-3">
-                <a
-                  href="#"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-gray-900 transition text-md transform hover:scale-110"
-                >
-                  <FaInstagram className="text-2xl" />
-                  <span>Instagram</span>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-gray-900 transition text-md transform hover:scale-110"
-                >
-                  <FaGithub className="text-2xl" />
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-gray-900 transition text-md transform hover:scale-110"
-                >
-                  <FaWhatsapp className="text-2xl" />
-                  <span>WhatsApp</span>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-gray-900 transition text-md transform hover:scale-110"
-                >
-                  <FaLinkedin className="text-2xl" />
-                  <span>LinkedIn</span>
-                </a>
+              <div className="flex flex-col space-y-[0.8em]">
+                {socialLinks.map(({ icon: Icon, link }, index) => (
+                  <a
+                    key={index}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-[0.8em] text-gray-600 hover:text-gray-900 transition text-[1em] transform hover:scale-110"
+                  >
+                    <Icon className="text-[1.5em]" />
+                    <span>{Icon.name.replace("Fa", "")}</span>
+                  </a>
+                ))}
               </div>
             </div>
 
-            <div className=" mb-10    w-[290px]">
-              <h2 className="font-semibold text-2xl text-gray-900 mb-4">
+            <div className="w-[30%]">
+              <h2 className="font-semibold text-[1.5em] text-gray-900 mb-[1em]">
                 Quick Links
               </h2>
-              <ul className="text-md space-y-2">
-                <li className=" mr-4">
-                  <a
-                    href="#home"
-                    className="text-gray-600 hover:text-gray-900 transition"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className=" mr-4">
-                  <a
-                    href="#services"
-                    className="text-gray-600 hover:text-gray-900 transition"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li className=" mr-4">
-                  <a
-                    href="#Portfolio"
-                    className="text-gray-600 hover:text-gray-900 transition"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-                <li className=" mr-4">
-                  <a
-                    href="#Cases"
-                    className="text-gray-600 hover:text-gray-900 transition"
-                  >
-                    Latest Cases
-                  </a>
-                </li>
-                <li className="">
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-gray-900 transition"
-                  >
-                    Connect with us
-                  </a>
-                </li>
+              <ul className="text-[1em] space-y-[0.5em]">
+                {[
+                  "Home",
+                  "Services",
+                  "Portfolio",
+                  "Latest Cases",
+                  "Connect with us",
+                ].map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={`#${link.replace(" ", "").toLowerCase()}`}
+                      className="text-gray-600 hover:text-gray-900 transition"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -145,7 +123,7 @@ const Footer = ({ overlayOn, setOverlay }) => {
               .getElementById("home")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="absolute bottom-6 right-6 bg-[#4541f1] text-white font-semibold text-md py-3 px-6 rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
+          className="absolute bottom-[1.5em] right-[1.5em] bg-[#4541f1] text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
         >
           Back to Top ↑
         </button>
