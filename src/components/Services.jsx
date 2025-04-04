@@ -45,6 +45,7 @@ function Services( {overlayOn, setOverlay}) {
             </div>
           </div>
           <img
+          loading="lazy"
             src={webPic}
             alt=""
             className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
@@ -71,7 +72,7 @@ function Services( {overlayOn, setOverlay}) {
               <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">Framer </span>
             </div>
           </div>
-          <img src={uiUx} alt="" className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
+          <img  loading="lazy" src={uiUx} alt="" className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
             style={{ animation: "scaleAnimation 10s ease-in-out infinite" }} />
         </div>
         <div onClick={()=> setOverlay(!overlayOn)} className="w-[450px] relative  overflow-hidden rounded-4xl  ">
@@ -100,7 +101,7 @@ function Services( {overlayOn, setOverlay}) {
               <span className=" bg-[#d3c5c5b2] p-2 rounded-4xl ">Canva </span>
             </div>
           </div>
-          <img src={graphic} alt="" className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
+          <img loading="lazy" src={graphic} alt="" className="rounded-4xl animate-[scaleAnimation_4s_ease-in-out_infinite]"
             style={{ animation: "scaleAnimation 10s ease-in-out infinite" }} />
         </div>
       </div>

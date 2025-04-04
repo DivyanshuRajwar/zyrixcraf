@@ -31,6 +31,7 @@ function ShowCase({overlayOn,setOverlay}) {
         </svg>
         <div className=" absolute w-full h-full top-0  flex ">
           <motion.img
+          loading="lazy"
             src={laptop}
             alt="Laptop"
             className="h-[250px] absolute top-50 left-[280px]"
@@ -44,6 +45,7 @@ function ShowCase({overlayOn,setOverlay}) {
 
           {/* Animated iPhone Image */}
           <motion.img
+          loading="lazy"
             src={Iphone}
             alt="iPhone"
             className="h-[300px] absolute top-[180px] left-[690px] z-4 "

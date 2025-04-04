@@ -27,11 +27,11 @@ function Landing({ hamb }) {
         </video>
       </div>
       {/* Over lay */}
-      <div className="absolute w-full h-full rounded-4xl flex flex-col  bg-opacity-10  shadow-lg bg-[#7e585883]">
+      <div className="absolute w-full h-full rounded-4xl flex flex-col  bg-opacity-10  shadow-lg bg-[#74595934]">
         <div className="w-full h-[80px] p-10 flex items-center  pl-[50px] font-bold ">
           <div className="flex items-center space-x-2  ">
             {" "}
-            <img src={Logo} alt="Logo" className="w-12 h-12" />
+            <img src={Logo} alt="Logo" className="w-12 h-12" loading="lazy" />
             <span className="  text-3xl  font-bold ">zyrixCraft</span>
           </div>
           <div className="flex space-x-8  bg-[#dad7da]  rounded-full px-6 py-3  ml-[250px]">
@@ -75,7 +75,7 @@ function Landing({ hamb }) {
               <div className="w-[90px] h-[90px] rounded-full bg-[#4441f1b4] hover:bg-[#4541f1] hover:text-white cursor-pointer bg-opacity-20 backdrop-blur-lg shadow-lg flex justify-center items-center ">
                 <i class="fi fi-br-arrow-down text-4xl "></i>
               </div>
-              {/* <img src={Epic} alt="pic" width={"350px"} /> */}
+             
               <span className="text-[150px] font-bold ">Epic</span>
             </div>
 
@@ -91,6 +91,7 @@ function Landing({ hamb }) {
               className="ml-[75%] w-[350px] mt-[50px]"
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+              loading="lazy"
             />
             {hamb ? (
               <div className="w-[40%] h-[50%]  absolute top-15 right-0 z-1 font-sans ">
@@ -150,6 +151,7 @@ function Landing({ hamb }) {
             )}
 
             <motion.img
+            loading="lazy"
               src={Plus}
               alt="plus"
               className="w-[150px] absolute top-0 right-[250px]"
@@ -164,6 +166,7 @@ function Landing({ hamb }) {
               }}
             />
             <motion.img
+            loading="lazy"
               src={Hash}
               alt="Hash"
               className="w-[150px] absolute top-40 right-[360px]"
@@ -177,6 +180,7 @@ function Landing({ hamb }) {
               }}
             />
             <motion.img
+            loading="lazy"
               src={Cube}
               alt="Cube"
               className="w-[150px] absolute top-[300px] z-0 right-[150px] rotate-[50deg] "

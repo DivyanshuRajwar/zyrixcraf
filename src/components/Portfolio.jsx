@@ -27,9 +27,10 @@ function Portfolio() {
         {/* Web Development */}
         <div className="w-full md:w-[60%] h-[500px] relative overflow-hidden rounded-xl cursor-pointer shadow-xl">
           <img
+          loading="lazy"
             src={webDev}
             alt="Web Development"
-            loading="lazy"
+           
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-6 left-6 right-6 bg-white bg-opacity-80 rounded-2xl p-6 shadow-lg flex flex-col">

@@ -46,7 +46,7 @@ const OurTeam = () => {
 
             {/* Image */}
             <div className="absolute bottom-0 w-full h-3/4 bg-white flex items-center justify-center overflow-hidden rounded-t-[80px] hover:h-[340px] transition-all duration-300 ease-in-out hover:cursor-pointer ">
-              <img className="w-full h-full object-cover" src={member.img} alt={member.name} />
+              <img className="w-full h-full object-cover" src={member.img} alt={member.name}  loading="lazy" />
             </div>
           </motion.div>
         ))}

@@ -122,6 +122,7 @@ const LatestCases = () => {
                   <div className="rounded-2xl overflow-hidden bg-black/30 backdrop-blur-md h-full border border-gray-800/20">
                     <div className="relative aspect-[16/9]">
                       <img
+                     loading="lazy"
                         src={case_.image}
                         alt={case_.title}
                         className="w-full h-full object-cover"

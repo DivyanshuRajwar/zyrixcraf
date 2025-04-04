@@ -17,6 +17,7 @@ const DataCompo = () => {
         We believe in <span className="font-semibold text-[#1e1f24]">Technology</span>
           <span className="inline-block mx-2">
             <img 
+            loading="lazy"
               src={img1} 
               alt="Tech Image" 
               className="w-[190px] h-[80px] rounded-[100px] border-none object-cover inline-block" 
@@ -28,6 +29,7 @@ const DataCompo = () => {
         <span className="text-6xl text-[#1e1f24] font-medium">
           <span className="inline-block mx-2">
             <img 
+            loading="lazy"
               src={img2} 
               alt="AI Image" 
               className="w-[190px] h-[80px] rounded-[100px] object-cover inline-block border-none " 

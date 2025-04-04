@@ -20,29 +20,34 @@ function ShowCase2() {
     <div className="w-screen h-auto  flex flex-col gap-5 justify-start pb-4 items-center text-white relative bg-black ">
         
      
-        {/* <img src={Hand} alt="" className="w-[1290px] h-[728px] sticky top-0 bg-[#dadada] " /> */}
+
         <div className="min-w-full min-h-full absolute top-[-23px] ">
             <HandCompo />
         </div>
       <div className="flex flex-col gap-5">
         <div className="flex w-screen gap-4 justify-center ">
           <img
+          loading="lazy"
             src={iphone01}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <img
+          loading="lazy"
+
             src={iphone02}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <div className="w-[290px] h-[570px]"></div>
           <img
+          loading="lazy"
             src={iphone03}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <img
+          loading="lazy"
             src={iphone04}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
@@ -51,22 +56,26 @@ function ShowCase2() {
 
         <div className="flex w-screen gap-4 justify-center">
           <img
+          loading="lazy"
             src={iphone05}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <img
+          loading="lazy"
             src={iphone06}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <div className="w-[290px] h-[570px]"></div>
           <img
+          loading="lazy"
             src={iphone07}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <img
+          loading="lazy"
             src={iphone08}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
@@ -75,22 +84,26 @@ function ShowCase2() {
 
         <div className="flex w-screen gap-4 justify-center">
           <img
+          loading="lazy"
             src={iphone09}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <img
+          loading="lazy"
             src={iphone10}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <div className="w-[290px] h-[570px]"></div>
           <img
+          loading="lazy"
             src={iphone11}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
           />
           <img
+          loading="lazy"
             src={iphone12}
             alt=""
             className="w-[300px] h-[590px] rounded-4xl"
