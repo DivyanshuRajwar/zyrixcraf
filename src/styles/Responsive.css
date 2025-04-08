@@ -93,11 +93,17 @@
         z-index: 100;
 
     }
+    .vertical-icons{
+      width: 100vw;
+      top: 0;
+      background-color: red;
+    }
     .contact{
         margin-top: 0.5em;
     }
     .nav_option span{
-        right: 0.8em;
+        right: -1.1em;
+        
     }
     /* Services */
     #services {
@@ -249,5 +255,152 @@
       .show_btn{
         width: 100% ;
       }
+      /* Become a client */
+      #left {
+        display: none ; /* Hide the left section */
+      }
+      
+      #right {
+        width: 100% ;
+        height: 100vh ;
+        padding: 1.5rem ;
+        background-color: #f1dbdb;
+      }
+      
+      #contact-heading {
+        font-size: 2rem ;
+        text-align: center;
+        position: relative;
+        right: 20px;
+      }
+      
+      #down-arrow {
+        width: 100px ;
+        margin: 0 auto ;
+        display: none;
+      }
+      
+      #contact-subtext {
+        font-size: 1rem ;
+        text-align: center;
+        display: block;
+        left: -10px;
+        /* position: relative; */
+      }
+      
+      #form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      #name-label,
+      #email-label {
+        margin: 0.5rem 0 ;
+        display: block;
+      }
+      #name-label{
+        position: relative;
+        top: 240px;
+        right: 45px;
+      }
+      #email-label{
+        position: relative;
+        top: 80px;
+        right: 86px;
+      }
+      
+      #input-wrapper {
+        flex-direction: column ;
+        width: 100% ;
+        gap: 1rem ;
+      }
+      
+      #name-input-box,
+      #email-input-box {
+        width:100% ;
+      }
+      #email-input-box{
+        position: relative;
+        top: -20px;
+      }
+      #name-input-box{
+        position: relative;
+        top: 170px;
+      }
+      #name-input,
+      #email-input {
+        width: 100% ;
+      }
+      #message-label{
+        position: relative;
+        top: 100px;
+        left: 20px;
+      }
+      #message-wrapper {
+        width: 100% ;
+      }
+      
+      #message-textarea {
+        height: 150px ;
+        position: relative;
+        top: 100px;
+      }
+      
+      #submit-btn {
+        width: 100% ;
+        position: relative;
+        top: 100px;
+      }
+      
+      #close-btn {
+        color: black;
+        top: -8px;
+        right: -15px
+      }
+      /* Data combo */
+      #data-container {
+        height: 50vh;
+        width: 100vw;
+        flex-direction: column;
+        padding: 1rem;
+      }
+    
+      #data-wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        padding: 1rem;
+        gap: 1rem;
 
+      }
+
+      #data-title {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    
+      #data-text-1 {
+        font-size: 2.1rem;
+        flex-wrap: wrap;
+      }
+    
+      #data-img-1 {
+        width: 120px;
+        height: 40px;
+      }
+    
+      #data-text-2 {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      #data-text-3{
+        font-size: 1.9rem;
+      }
+    
+      #data-img-2 {
+        width: 120px;
+        height: 40px;
+      }
 }

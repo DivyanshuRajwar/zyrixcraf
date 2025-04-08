@@ -101,59 +101,7 @@ function Landing({ hamb }) {
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
               loading="lazy"
             />
-            {hamb ? (
-              <div className="nav_option w-[40%] h-[50%] absolute top-15 right-0 z-1 font-sans">
-                <span className="absolute right-[6.5em] top-[1.463em] text-[1.563em] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                  <i onClick={() =>
-                      document
-                        .getElementById("home")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    } className="fi fi-rr-home neon-icon"></i>
-                </span>
-                <span className="absolute right-[176px] top-[100px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
-                  <i
-                    class="fi fi-br-customer-care neon-icon"
-                    onClick={() =>
-                      document
-                        .getElementById("services")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  ></i>
-                </span>
-                <span className="absolute right-[182px] top-[170px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                  <i
-                    class="fi fi-rr-edit-alt neon-icon"
-                    onClick={() =>
-                      document
-                        .getElementById("portfolio")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  ></i>
-                </span>
-                <span className="absolute right-[165px] top-[235px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                  <i
-                    class="fi fi-rr-users-alt neon-icon"
-                    onClick={() =>
-                      document
-                        .getElementById("team")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  ></i>
-                </span>
-                <span className=" contact absolute right-[130px] top-[290px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
-                  <i
-                    class="fi fi-rr-phone-guide neon-icon "
-                    onClick={() =>
-                      document
-                        .getElementById("footer")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  ></i>
-                </span>
-              </div>
-            ) : (
-              <> </>
-            )}
+           
 
             <motion.img
               loading="lazy"

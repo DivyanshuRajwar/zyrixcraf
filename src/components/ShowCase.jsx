@@ -4,7 +4,7 @@ import laptop from "../assets/laptop01.png";
 import { motion } from "framer-motion";
 function ShowCase({overlayOn,setOverlay}) {
   return (
-    <div id="Portfolio" className="w-screen h-screen bg-black flex flex-col justify-between pb-10 items-center text-white relative">
+    <div  className="w-screen h-screen bg-black flex flex-col justify-between pb-10 items-center text-white relative">
       {/* Top Section */}
       <div className="first_showCase w-[80%] h-[30%] flex justify-between items-center">
         <div className="w-[70%]">

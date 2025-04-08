@@ -9,7 +9,7 @@ function Portfolio() {
 
   return (
     <div
-      id="portfolio"
+      id="Portfolio"
       className="shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 border-none w-[95%] min-h-screen flex flex-col justify-between pb-10 pt-10 items-center text-white rounded-4xl mt-3"
     >
       {/* Heading */}

@@ -75,7 +75,7 @@ const LatestCases = () => {
   };
 
   return (
-    <div id='Cases' className="w-full bg-[#0A0A0A] text-white py-16 px-4 sm:px-8 relative overflow-hidden">
+    <div id='cases' className="w-full bg-[#0A0A0A] text-white py-16 px-4 sm:px-8 relative overflow-hidden">
       {/* Background balls - Repositioned to the left with higher opacity */}
       <BackgroundBall className="w-[800px] h-[800px] -left-1/4 top-0 opacity-50" />
       <BackgroundBall className="w-[600px] h-[600px] -left-1/3 top-1/4 opacity-40" />

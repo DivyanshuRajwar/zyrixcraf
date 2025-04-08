@@ -16,7 +16,7 @@ const OurTeam = () => {
     { name: "Divyanshu", role: "Developer", img: img2, bg: "bg-gray-200" },
     { name: "Sachin", role: "Marketer", img: img3, bg: "bg-blue-200" },
     { name: "Adarsh", role: "Product Manager", img: img5, bg: "bg-green-200" },
-    { name: "rohit", role: "Developer", img: img6, bg: "bg-green-200" },
+    { name: "Rohit", role: "Developer", img: img6, bg: "bg-green-200" },
     { name: "Sofiya", role: "Data analyst", img: img7, bg: "bg-green-200" },
   ];
 
@@ -65,26 +65,26 @@ const OurTeam = () => {
   return (
     <div
       id="team"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-6 md:gap-9 text-white p-4 md:p-10 bg-[#070129] relative overflow-hidden"
+      className="w-full min-h-screen flex flex-col justify-center items-center gap-6 md:gap-9 text-white p-4 md:p-10 bg-[#070129]  relative overflow-hidden"
     >
       <div className="text-center w-full">
         <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-5">Our Team</h1>
       </div>
       
-      <div className="text-center w-full max-w-3xl px-4">
+      <div className="text-center w-full max-w-3xl px-4  ">
         <p className="text-lg md:text-xl">
           Meet our talented team of professionals dedicated to delivering the best results. Our innovative team ensures creativity, technical expertise, and strategic marketing to elevate your brand.
         </p>
       </div>
 
       {/* Desktop View */}
-      <div className="hidden lg:flex space-x-8 justify-center items-center mt-20 md:mt-12 relative max-h-100 max-w-full overflow-x-auto px-4">
+      <div className="hidden lg:flex space-x-8 justify-center pt-2 items-center  md:mt-12 relative min-h-100 max-w-full overflow-x-auto px-4  ">
         {teamMembers.map((member, index) => (
           <motion.div 
             key={index} 
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className={`relative flex flex-col items-center ${member.bg} rounded-[80px] shadow-xl w-44 h-96 text-black overflow-hidden`}
+            className={`relative flex flex-col items-center ${member.bg} rounded-[80px] shadow-xl w-40 h-96 text-black overflow-hidden`}
           > 
             <div className="absolute top-8 flex flex-col items-center">
               <h2 className="font-semibold text-xl md:text-2xl">{member.name}</h2>
