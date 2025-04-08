@@ -12,101 +12,101 @@ import iphone10 from "../assets/10.webp";
 import iphone11 from "../assets/11.webp";
 import iphone12 from "../assets/12.webp";
 import Hand from "../assets/hand.webp";
-
+import '../styles/Responsive.css'
 import HandCompo from "./HandCompo";
 
 function ShowCase2() {
   return (
-    <div className="w-screen h-auto  flex flex-col gap-5 justify-start pb-4 items-center text-white relative bg-black ">
+    <div className="phone-compo w-screen h-auto  flex flex-col gap-5 justify-start pb-4 items-center text-white relative bg-black ">
         
      
 
-        <div className="min-w-full min-h-full absolute top-[-23px] ">
+        <div className="handCompo min-w-full min-h-full absolute top-[-23px] ">
             <HandCompo />
         </div>
       <div className="flex flex-col gap-5">
-        <div className="flex w-screen gap-4 justify-center ">
+        <div className="iphone-container flex w-screen gap-4 justify-center ">
           <img
           loading="lazy"
             src={iphone01}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
           <img
           loading="lazy"
 
             src={iphone02}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
-          <div className="w-[290px] h-[570px]"></div>
+          <div className="laptop_space w-[290px] h-[570px]"></div>
           <img
           loading="lazy"
             src={iphone03}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
           <img
           loading="lazy"
             src={iphone04}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
         </div>
 
-        <div className="flex w-screen gap-4 justify-center">
+        <div className="iphone-container flex w-screen gap-4 justify-center">
           <img
           loading="lazy"
             src={iphone05}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
           <img
           loading="lazy"
             src={iphone06}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
-          <div className="w-[290px] h-[570px]"></div>
+          <div className="laptop_space w-[290px] h-[570px]"></div>
           <img
           loading="lazy"
             src={iphone07}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
           <img
           loading="lazy"
             src={iphone08}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
         </div>
 
-        <div className="flex w-screen gap-4 justify-center">
+        <div className="iphone-container flex w-screen gap-4 justify-center">
           <img
           loading="lazy"
             src={iphone09}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
           <img
           loading="lazy"
             src={iphone10}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
-          <div className="w-[290px] h-[570px]"></div>
+          <div className="laptop_space w-[290px] h-[570px]"></div>
           <img
           loading="lazy"
             src={iphone11}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
           <img
           loading="lazy"
             src={iphone12}
             alt=""
-            className="w-[300px] h-[590px] rounded-4xl"
+            className="iphone w-[300px] h-[590px] rounded-4xl"
           />
         </div>
       </div>

@@ -2,10 +2,11 @@ import React from "react";
 import Hand from "../assets/hand.webp";
 import laptop from "../assets/macbook-pro.png";
 import eComm from "../assets/0401.mp4";
+import '../styles/Responsive.css'
 function HandCompo() {
   return (
-    <div className="relative   min-w-full min-h-[1850px]   ">
-      <div className="sticky h-full w-full top-10    ">
+    <div className="laptop_cover relative   min-w-full min-h-[1850px]   ">
+      <div className="laptop_div sticky h-full w-full top-10    ">
         <img src={laptop} alt="laptop"  className=" w-[750px]   mt-5 ml-[350px]" />
         <video
           src={eComm}

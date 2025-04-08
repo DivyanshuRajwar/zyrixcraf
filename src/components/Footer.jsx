@@ -1,135 +1,237 @@
-import React from "react";
+import React from 'react';
 import {
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaWhatsapp,
-  FaTwitter,
+    FaLinkedin,
+    FaGithub,
+    FaInstagram,
+    FaWhatsapp,
+    FaTwitter,
 } from "react-icons/fa";
 
 const Footer = ({ overlayOn, setOverlay }) => {
-  const socialLinks = [
-    {
-      icon: FaInstagram,
-      link: "https://www.instagram.com/zyrixcraft?igsh=dWE0d2Vwbmx4NjBm",
-    },
-    { icon: FaGithub, link: "https://github.com/zyrixcraft" },
-    { icon: FaWhatsapp, link: "https://wa.me/919711625392" }, // Proper WhatsApp link format
-    {
-      icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/zyrixcraft-in-11b338359/",
-    },
-  ];
-  return (
-    <div id="footer" className="w-full">
-      <footer className="bg-gray-100 py-[3.5em] font-[Poppins] relative">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between px-[5%] gap-[4em]">
-          <div className="mb-[1.5em] md:mb-0 md:w-[30%]">
-            <h1 className="text-[2.2em] font-bold mb-[1em] text-gray-900">
-              We would love to hear from you.
-            </h1>
-            <p className="mb-[1em] text-[1.2em] text-gray-600">
-              Feel free to reach out if you want to collaborate with us, or
-              simply have a chat.
-            </p>
-            <button
-              onClick={() => setOverlay(!overlayOn)}
-              className="bg-[#4541f1] text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
-            >
-              Become a Client
-            </button>
-            <p className="mt-[1.5em] text-[0.95em] text-gray-500">
-              Don’t like the forms? Drop us a line via email.
-            </p>
-            <a
-              href="mailto:zyrixcraft@gmail.com"
-              className="text-[1em] text-gray-700 font-medium hover:text-blue-600"
-            >
-              Zyrixcraft@gmail.com
-            </a>
-          </div>
+    const socialLinks = [
+        {
+            icon: FaInstagram,
+            link: "https://www.instagram.com/zyrixcraft?igsh=dWE0d2Vwbmx4NjBm",
+        },
+        { icon: FaGithub, link: "https://github.com/zyrixcraft" },
+        { icon: FaWhatsapp, link: "https://wa.me/919711625392" },
+        {
+            icon: FaLinkedin,
+            link: "https://www.linkedin.com/in/zyrixcraft-in-11b338359/",
+        },
+    ];
 
-          <div className="flex flex-col md:flex-row md:space-x-[4em] w-full md:w-[70%] gap-[4em]">
-            <div className="w-[50%]">
-              <h2 className="font-semibold text-[1.5em] text-gray-900 mb-[1em]">
-                Contact us
-              </h2>
-              <p className="text-[1em] text-gray-600">
-                Email:{" "}
-                <a href="mailto:zyrixcraft@gmail.com" className="text-blue-600">
-                  zyrixcraft@gmail.com
-                </a>
-              </p>
-              <p className="text-[1em] text-gray-600">
-                Phone:{" "}
-                <span className="text-gray-700 font-medium">
-                  +19 97116 25392
-                </span>
-              </p>
-              <p className="text-[1em] text-gray-600">
-                New Delhi - 110044, Near Union Bank aali village
-              </p>
+    return (
+        <footer className="bg-white w-full font-[Poppins] relative z-0 pt-[80px]">
+            {/* Mobile Version */}
+            <div className="md:hidden p-6 flex flex-col space-y-6">
+            <div>
+                <h2 className="text-3xl font-bold mb-2 text-gray-900">We would love to hear from you.</h2>
+                <p className="text-gray-600 mb-4">Feel free to reach out if you want to collaborate with us, or simply have a chat.</p>
+                
+                <button 
+                    onClick={() => setOverlay(!overlayOn)}
+                    className="bg-[#4541f1] w-full text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg mb-4 hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
+                >
+                Become a Client
+                </button>
+                
+                <p className="text-gray-500 mb-1">Don't like forms? Drop us a line via email.</p>
+                <p className="text-gray-700 font-medium hover:text-blue-600">Zyrixcraft@gmail.com</p>
             </div>
-
-            <div className="w-[30%]">
-              <h2 className="font-semibold text-[1.5em] text-gray-900 mb-[1em]">
-                Follow us
-              </h2>
-              <div className="flex flex-col space-y-[0.8em]">
-                {socialLinks.map(({ icon: Icon, link }, index) => (
-                  <a
-                    key={index}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-[0.8em] text-gray-600 hover:text-gray-900 transition text-[1em] transform hover:scale-110"
-                  >
-                    <Icon className="text-[1.5em]" />
-                    <span>{Icon.name.replace("Fa", "")}</span>
-                  </a>
-                ))}
-              </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact us</h3>
+                
+                <div className="space-y-3">
+                <p><span className="text-gray-600">Email:</span> <a href="mailto:zyrixcraft@gmail.com" className="text-blue-600">zyrixcraft@gmail.com</a></p>
+                <p><span className="text-gray-600">Phone:</span> <a href="tel:+19971162539" className="text-blue-600">+19 97116 25392</a></p>
+                <p className="text-gray-600">New Delhi - 110044, Near Union Bank aali village</p>
+                </div>
+                
+                <hr className="my-6 border-gray-200" />
+                
+                <div className="flex justify-between">
+                <div>
+                    <h3 className="text-lg font-semibold mb-4">Follow us</h3>
+                    <div className="space-y-2">                    
+                        {socialLinks.map((item, index) => (
+                            <p key={index}>
+                                <a href={item.link} className="text-gray-600 flex items-center">
+                                    <item.icon className="mr-2" />
+                                    {item.icon === FaInstagram ? "Instagram" :
+                                     item.icon === FaGithub ? "GitHub" :
+                                     item.icon === FaWhatsapp ? "WhatsApp" :
+                                     item.icon === FaLinkedin ? "LinkedIn" : ""} 
+                                    <span className="ml-1">↗</span>
+                                </a>
+                            </p>
+                        ))}
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                    <div className="space-y-2">
+                    <p><a href="#" className="text-gray-600">Home</a></p>
+                    <p><a href="#" className="text-gray-600">Services</a></p>
+                    <p><a href="#" className="text-gray-600">Portfolio</a></p>
+                    </div>
+                </div>
+                </div>
             </div>
-
-            <div className="w-[30%]">
-              <h2 className="font-semibold text-[1.5em] text-gray-900 mb-[1em]">
-                Quick Links
-              </h2>
-              <ul className="text-[1em] space-y-[0.5em]">
-                {[
-                  "Home",
-                  "Services",
-                  "Portfolio",
-                  "Latest Cases",
-                  "Connect with us",
-                ].map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href={`#${link.replace(" ", "").toLowerCase()}`}
-                      className="text-gray-600 hover:text-gray-900 transition"
+            </div>
+            
+            {/* Tablet Version */}
+            <div className="hidden lg:hidden md:block py-12 px-8 bg-gray-50">
+                <div className="grid md:grid-cols-2 gap-10 mb-12">
+                    <div>
+                        <h1 className="text-3xl font-bold mb-4 text-gray-900">We would love to hear from you.</h1>
+                        <p className="text-gray-600 mb-6">Feel free to reach out if you want to collaborate with us, or simply have a chat.</p>
+                        <button
+                            onClick={() => setOverlay(!overlayOn)}
+                            className="bg-[#4541f1] text-white font-semibold text-[1em] py-3 px-6 rounded-full mb-6 shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
+                        >
+                            Become a Client
+                        </button>
+                        
+                        <p className="text-gray-500 mb-1">Don't like the forms? Drop us a line via email.</p>
+                        <p className="text-gray-700 font-medium hover:text-blue-600"> <a href="mailto:zyrixcraft@gmail.com">Zyrixcraft@gmail.com</a></p>
+                    </div>
+                    
+                    <div>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h2 className="text-xl font-bold mb-4 text-gray-900">Contact us</h2>
+                                <div className="space-y-3">
+                                    <p><span className="text-gray-600">Email:</span> <a href="mailto:zyrixcraft@gmail.com" className="text-gray-600">zyrixcraft@gmail.com</a></p>
+                                    <p><span className="text-gray-600">Phone:</span> <a href="tel:+19971162539" className="text-gray-600">+19 97116 25392</a></p>
+                                    <p className="text-gray-600 max-w-xs">New Delhi - 110044, Near Union Bank aali village</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h2 className="text-xl font-bold mb-4 text-gray-900">Quick Links</h2>
+                                <div className="space-y-3">
+                                    <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Home</a></p>
+                                    <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Services</a></p>
+                                    <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Portfolio</a></p>
+                                    <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Latest Cases</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="mt-8">
+                            <h2 className="text-xl font-bold mb-4 text-gray-900">Follow us</h2>
+                            <div className="grid grid-cols-2 gap-3">
+                                {socialLinks.map((item, index) => (
+                                    <div key={index} className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition text-sm transform hover:scale-105">
+                                        <span className="mr-2">
+                                            <item.icon/>
+                                        </span>
+                                        <a href={item.link} className="text-gray-600">
+                                            {item.icon === FaInstagram ? "Instagram" :
+                                            item.icon === FaGithub ? "GitHub" :
+                                            item.icon === FaWhatsapp ? "WhatsApp" :
+                                            item.icon === FaLinkedin ? "LinkedIn" : ""}   
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="border-t border-gray-200 pt-6 flex justify-between text-gray-600 relative">
+                    <p>© 2025 Zyrixcraft. All rights reserved.</p>
+                    <button 
+                        onClick={() => 
+                            document
+                                .getElementById("home")
+                                ?.scrollIntoView({ behavior: "smooth" })  
+                        }
+                        className="absolute bottom-[1.5em] right-[1.5em] bg-[#4541f1] text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
                     >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                    Back to Top <span className="ml-1">↑</span>
+                    </button>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <button
-          onClick={() =>
-            document
-              .getElementById("home")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="absolute bottom-[1.5em] right-[1.5em] bg-[#4541f1] text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
-        >
-          Back to Top ↑
-        </button>
-      </footer>
-    </div>
-  );
+            {/* Desktop Version */}
+            <div className="hidden lg:block py-18 px-56 bg-gray-50">
+                <div className="flex justify-between mb-16">
+                    <div className="max-w-md">
+                    <h1 className="text-4xl font-bold mb-4 text-gray-900">We would love to hear from you.</h1>
+                    <p className="text-gray-600 mb-6">Feel free to reach out if you want to collaborate with us, or simply have a chat.</p>
+                    <button
+                        onClick={() => setOverlay(!overlayOn)}
+                        className="bg-[#4541f1] text-white font-semibold text-[1em] py-3 px-8 rounded-full mb-6 shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
+                    >
+                        Become a Client
+                    </button>
+                    
+                    <p className="text-gray-500 mb-1">Don't like the forms? Drop us a line via email.</p>
+                    <p className="text-gray-700 font-medium hover:text-blue-600"> <a href="mailto:zyrixcraft@gmail.com">Zyrixcraft@gmail.com</a></p>
+                    </div>
+                    
+                    <div className="flex space-x-20">
+                    <div>
+                        <h2 className="text-xl font-bold mb-6 text-gray-900">Contact us</h2>
+                        <div className="space-y-4">
+                        <p><span className="text-gray-600">Email:</span> <a href="mailto:zyrixcraft@gmail.com" className="text-gray-600">zyrixcraft@gmail.com</a></p>
+                        <p><span className="text-gray-600">Phone:</span> <a href="tel:+19971162539" className="text-gray-600">+19 97116 25392</a></p>
+                        <p className="text-gray-600 max-w-xs">New Delhi - 110044, Near Union Bank aali village</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 className="text-xl font-bold mb-6 text-gray-900">Follow us</h2>
+                        <div className="space-y-4">
+                            {socialLinks.map((item, index) => (
+                                <div key={index} className="flex items-center space-x-[0.8em] text-gray-600 hover:text-gray-900 transition text-[1em] transform hover:scale-110">
+                                    <span className="mr-2">
+                                        <item.icon/>
+                                    </span>
+                                    <a href={item.link} className="text-gray-600">
+                                        {item.icon === FaInstagram ? "Instagram" :
+                                        item.icon === FaGithub ? "GitHub" :
+                                        item.icon === FaWhatsapp ? "WhatsApp" :
+                                        item.icon === FaLinkedin ? "LinkedIn" : ""}   
+                                    </a>
+                                </div>
+                            ))}
+                        </div>                        
+                        </div>
+                        
+                        <div>
+                            <h2 className="text-xl font-bold mb-6">Quick Links</h2>
+                            <div className="space-y-4 ">
+                            <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Home</a></p>
+                            <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Services</a></p>
+                            <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Portfolio</a></p>
+                            <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Latest Cases</a></p>
+                            <p><a href="#" className="text-gray-600 hover:text-gray-900 transition">Connect with us</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div className="border-t border-gray-200 pt-6 flex justify-between text-gray-600">
+                        <p>© 2025 Zyrixcraft. All rights reserved.</p>
+                        <button 
+                            onClick={() => 
+                                document
+                                    .getElementById("home")
+                                    ?.scrollIntoView({ behavior: "smooth" })  
+                            }
+                            className="absolute bottom-[1.5em] right-[1.5em] bg-[#4541f1] text-white font-semibold text-[1em] py-[0.8em] px-[1.5em] rounded-full shadow-lg hover:bg-blue-800 hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out"
+                        >
+                        Back to Top <span className="ml-1">↑</span>
+                        </button>
+                    </div>
+                </div>
+        </footer>
+    );
 };
 
 export default Footer;

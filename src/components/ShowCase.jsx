@@ -6,13 +6,13 @@ function ShowCase({overlayOn,setOverlay}) {
   return (
     <div id="Portfolio" className="w-screen h-screen bg-black flex flex-col justify-between pb-10 items-center text-white relative">
       {/* Top Section */}
-      <div className="w-[80%] h-[30%] flex justify-between items-center">
+      <div className="first_showCase w-[80%] h-[30%] flex justify-between items-center">
         <div className="w-[70%]">
           <span className="text-[50px] font-bold">
             &#123; Modern &#125; <br /> Responsive Web & Mobile
           </span>
         </div>
-        <span className="text-[200px] text-gray-500 font-bold">**</span>
+        <span className="star text-[200px] text-gray-500 font-bold">**</span>
       </div>
 
         {/* SVG Middle */}
@@ -29,12 +29,12 @@ function ShowCase({overlayOn,setOverlay}) {
             stroke="gray"
           ></path>
         </svg>
-        <div className=" absolute w-full h-full top-0  flex ">
+        <div className="first_show_middle absolute w-full h-full top-0  flex ">
           <motion.img
           loading="lazy"
             src={laptop}
             alt="Laptop"
-            className="h-[250px] absolute top-50 left-[280px]"
+            className="show_laptop h-[250px] absolute top-50 left-[280px]"
             animate={{ y: [0, -20, 0] }} 
             transition={{
               duration: 5, 
@@ -48,7 +48,7 @@ function ShowCase({overlayOn,setOverlay}) {
           loading="lazy"
             src={Iphone}
             alt="iPhone"
-            className="h-[300px] absolute top-[180px] left-[690px] z-4 "
+            className="show_iphone h-[300px] absolute top-[180px] left-[690px] z-4 "
             animate={{ x: [0, 20, 0] }} 
             transition={{
               duration: 5,
@@ -59,14 +59,14 @@ function ShowCase({overlayOn,setOverlay}) {
         </div>
       </div>
       {/*Bottom */}
-      <div className="w-[80%] flex justify-between items-center z-1">
-        <div className="w-[70%]">
+      <div className="show_btm w-[80%] flex justify-between items-center z-1">
+        <div className=" w-[70%]">
           <span className="text-2xl">
             Transforming your vision into <br /> reality—strategically and
             creatively
           </span>
         </div>
-        <div className="w-[30%] flex justify-center items-center gap-10">
+        <div className=" show_btn w-[30%] flex justify-center items-center gap-10">
             <button  onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}  className="bg-gray-400 rounded-3xl p-3 text-lg text-black hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Check Our PortFolio</button>
             <button onClick={()=> setOverlay(!overlayOn)} className="bg-[#695a5a93] rounded-3xl p-3 text-lg  text-white hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ease-in-out ">Get in Touch</button>
         </div>

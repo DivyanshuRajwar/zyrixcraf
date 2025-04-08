@@ -1,0 +1,253 @@
+@media (max-width: 767px){
+    #CursorDot{
+        display: none;
+    }
+    #Wrapper_head{
+        width: 20%;
+    }
+    #Wrapper_head .hamb i{
+        width: 1.5em;
+        display: flex;
+        justify-content: center;
+    }
+    #Wrapper_head .btn{
+        display: none;
+    }
+    #landing_video video{
+        filter: brightness(1);
+        width: 100%;
+        object-fit: cover;
+    }
+    .orb{
+        display: none;
+    }
+    #landing_overLay .items{
+        display: none;
+    }
+    #landing_overLay .logo img{
+        width: 2em;
+        height: 2em;
+    }
+    #landing_overLay .logo span{
+        font-size: 1.5em;
+    }
+    #Landing_Text{
+        z-index: 1;
+        width: 100%;
+        height: 60%;
+        font-size: 0.56em;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+    #icons_sec{
+        width: 30%;
+        position: inherit;
+        z-index: 101;
+    }
+    .arrow_div{
+        width: 100%;
+        gap: 5em;
+        padding: 2em 2em;
+        padding-top: 0;
+        height: 12em;
+
+    }
+    .blue_arrow{
+        width: 9em;
+        height: 9em;
+    }
+    .blue_arrow i{
+        font-size: 4.5em;
+    }
+    .digital_text{
+        width: 100%;
+        text-wrap: nowrap;
+        font-size: 6.2em;
+        z-index: 500000;
+    }
+    .landing_img{
+        top: 25em;
+        bottom: 0;
+    }
+    .plus{
+        width: 30%;
+        top: 26em;
+    }
+    .hash{
+        width: 30%;
+        top: 35em;
+        left: 5em;
+    }
+    .cube{
+        width: 30%;
+        top: 29em;
+        left: 14em;
+    }
+    .nav_option{
+        position: absolute;
+        width: 40%;
+        height: 50%;
+        z-index: 100;
+
+    }
+    .contact{
+        margin-top: 0.5em;
+    }
+    .nav_option span{
+        right: 0.8em;
+    }
+    /* Services */
+    #services {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        border-radius: 0;
+      }
+    
+      #services-header {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+    
+      #services-header h3 {
+        font-size: 24px;
+        text-align: center;
+      }
+    
+      #services-header h2 {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+      }
+    
+      #services-cards {
+        width: 100%;
+        min-height: 50%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+      }
+    
+      #web-card,
+      #uiux-card,
+      #graphic-card {
+        width: 100%;
+        height: 25em;
+      }
+
+      #web-card img,
+      #uiux-card img,
+      #graphic-card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    
+
+      #web-card div #card-heading,
+      #uiux-card div #card-heading,
+      #graphic-card div #card-heading{
+        font-size: 20px;
+      }
+    
+      #web-card p,
+      #uiux-card p,
+      #graphic-card p {
+        font-size: 18px;
+        margin-top: 5em;
+      }
+    
+      
+    
+      #web-card .flex,
+      #uiux-card .flex,
+      #graphic-card .flex {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    
+      #web-card .flex span,
+      #uiux-card .flex span,
+      #graphic-card .flex span {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+      /*Showcase*/
+     
+      .laptop_space{
+        display: none;
+      }
+      .laptop_cover{
+        max-height: 50px;
+        padding-bottom: 36em;
+      }
+      .laptop_cover video{
+        left: 2.7em;
+        top: 0.2em;
+        width: 78%;
+        height: 89%;
+      }
+      .iphone{
+        width: 25em;
+        height: 25em;
+        margin-bottom: 0;
+      }
+      .laptop_div img{
+        margin-left: 0;
+        width: 25em;
+      }
+      .first_showCase{
+        width: 100vw;
+        padding: 0.5em;
+      }
+      .first_showCase span{
+        font-size: 1.8em;
+      }
+      .first_showCase .star{
+        font-size: 10em;
+      }
+      .first_show_middle{
+        top: 10em;
+        width: 100vw;
+        margin-left: 0;
+    }
+      .first_show_middle img{
+        left: 0;
+      }
+      .show_laptop{
+        top: 8em;
+        margin-left: -2em;
+        width: 18em;
+        height: 10em;
+      }
+      .show_iphone{
+        top: 5em;
+        margin-left: 12em;
+        width: 7em;
+        height: 13em;
+      }
+      .show_btm{
+        width: 100vw;
+        font-size: 1em;
+        display: block;
+        padding: 1em;
+      }
+      .show_btm div{
+        width: 100%;
+      }
+      .show_btm span{
+        width: 100%;
+        font-size: 1.9em;
+      }
+      .show_btm span br{
+        display: none;
+      }
+      .show_btn{
+        width: 100% ;
+      }
+
+}

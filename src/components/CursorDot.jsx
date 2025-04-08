@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import '../styles/Responsive.css';
 function CursorDot() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -16,7 +16,7 @@ function CursorDot() {
   }, []);
 
   return (
-    <motion.div
+    <motion.div id="CursorDot"
     className="fixed w-3 h-3 bg-[#4541f1] rounded-full pointer-events-none z-200"
       animate={{ x: position.x - 8, y: position.y - 8 }}
       transition={{ type: "spring", stiffness: 100, damping: 15 }}

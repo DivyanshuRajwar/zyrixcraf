@@ -1,6 +1,7 @@
 import React from "react";
 import "@flaticon/flaticon-uicons/css/all/all.css";
 import "../index.css";
+import "../styles/Responsive.css"
 import { motion } from "framer-motion";
 import videoSrc from "../assets/Backgroung.mp4";
 import Epic from "../assets/epic.png";
@@ -13,11 +14,11 @@ function Landing({ hamb }) {
   return (
     <div
       id="home"
-      className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative mt-2  "
+      className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative mt-[0.125em]"
     >
-      <div className="w-full h-full border-none  ">
+      <div id="landing_video" className="w-full h-full border-none ">
         <video
-          className="w-full h-full border-none object-fill rounded-4xl "
+          className="w-full h-full border-none object-fill rounded-4xl"
           autoPlay
           loop
           muted
@@ -27,18 +28,18 @@ function Landing({ hamb }) {
         </video>
       </div>
       {/* Over lay */}
-      <div className="absolute w-full h-full rounded-4xl flex flex-col  bg-opacity-10  shadow-lg bg-[#74595934]">
-        <div className="w-full h-[80px] p-10 flex items-center  pl-[50px] font-bold ">
-          <div className="flex items-center space-x-2  ">
-            {" "}
-            <img src={Logo} alt="Logo" className="w-12 h-12" loading="lazy" />
-            <span className="  text-3xl  font-bold ">zyrixCraft</span>
+      <div id="landing_overLay"  className="absolute w-full h-full rounded-4xl flex flex-col bg-opacity-10 shadow-lg bg-[#74595934]  ">
+        <div className="w-full h-[5em] p-[2.5em] flex items-center pl-[3.125em] font-bold">
+          {/* Logo */}
+          <div className="logo flex items-center space-x-2">
+            <img src={Logo} alt="Logo" className="w-[3em] h-[3em]" loading="lazy" />
+            <span className="text-[1.875em] font-bold">zyrixCraft</span>
           </div>
-          <div className="flex space-x-8  bg-[#dad7da]  rounded-full px-6 py-3  ml-[250px]">
+          {/* Items */}
+          <div className="items flex space-x-8 bg-[#dad7da] rounded-full px-[1.5em] py-[0.75em] ml-[15.625em]">
             <div className="relative group inline-block cursor-pointer">
-              <span className="text-black text-lg ">Home</span>
-
-              <div className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#4541f1] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></div>
+              <span className="text-black text-[1.125em]">Home</span>
+              <div className="absolute left-1/2 bottom-0 w-0 h-[0.125em] bg-[#4541f1] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></div>
             </div>
             <div className="relative group inline-block cursor-pointer">
               <span
@@ -64,46 +65,50 @@ function Landing({ hamb }) {
               <div className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#4541f1] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></div>
             </div>
           </div>
+
         </div>
-        <div className="w-full h-full  flex  ">
-          <div className="w-1/2 h-[100%]  pt-[50px] pl-10 flex flex-col   ">
-            <span className="  text-[100px] font-bold font-poppins">
-              Crazy <span className="font-winky"> Ideas</span>
+        <div className="w-full h-full flex">
+          {/*Text*/ }
+          <div id="Landing_Text" className="w-1/2 h-[100%] pt-[3.125em] pl-[2.5em] flex flex-col">
+            <span className="text-[6.25em] font-bold font-poppins">
+              Crazy <span className="  ">Ideas</span>
             </span>
 
-            <div className="flex justify-end items-center w-[80%] gap-10 h-[30%]  ">
-              <div className="w-[90px] h-[90px] rounded-full bg-[#4441f1b4] hover:bg-[#4541f1] hover:text-white cursor-pointer bg-opacity-20 backdrop-blur-lg shadow-lg flex justify-center items-center ">
-                <i class="fi fi-br-arrow-down text-4xl "></i>
+            <div className="arrow_div flex justify-end items-center w-[80%] gap-[2.5em] h-[30%]">
+              <div
+              onClick={() =>
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className=" blue_arrow w-[5.625em] h-[5.625em] rounded-full bg-[#4441f1b4] hover:bg-[#4541f1] hover:text-white cursor-pointer bg-opacity-20 backdrop-blur-lg shadow-lg flex justify-center items-center">
+                <i className="fi fi-br-arrow-down text-[2.5em]"></i>
               </div>
-             
-              <span className="text-[150px] font-bold ">Epic</span>
+              <span className="text-[9.375em] font-bold">Epic</span>
             </div>
 
-            <span className="text-[100px] font-bold  fontcls ">
+            <span className="digital_text text-[6.25em] font-bold fontcls">
               Digital Builds!
             </span>
           </div>
 
-          <div className="w-1/2 h-full   overflow-hidden   relative">
+          <div id="icons_sec" className="w-1/2 h-full overflow-hidden relative">
             <motion.img
               src={Orb}
               alt="Orb"
-              className="ml-[75%] w-[350px] mt-[50px]"
+              className="orb landing_img ml-[75%] w-[21.875em] mt-[3.125em]"
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
               loading="lazy"
             />
             {hamb ? (
-              <div className="w-[40%] h-[50%]  absolute top-15 right-0 z-1 font-sans ">
-                <span className="absolute right-[147px] top-[25px] text-[25px] hover:cursor-pointer hover:scale-[1.1]  transition-all duration-300 ">
-                  <i
-                    className="fi fi-rr-home neon-icon"
-                    onClick={() =>
+              <div className="nav_option w-[40%] h-[50%] absolute top-15 right-0 z-1 font-sans">
+                <span className="absolute right-[6.5em] top-[1.463em] text-[1.563em] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
+                  <i onClick={() =>
                       document
                         .getElementById("home")
                         ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  ></i>
+                    } className="fi fi-rr-home neon-icon"></i>
                 </span>
                 <span className="absolute right-[176px] top-[100px] text-[25px]  hover:cursor-pointer hover:scale-[1.1] transition-all duration-300 ">
                   <i
@@ -135,7 +140,7 @@ function Landing({ hamb }) {
                     }
                   ></i>
                 </span>
-                <span className="absolute right-[130px] top-[290px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
+                <span className=" contact absolute right-[130px] top-[290px] text-[25px] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
                   <i
                     class="fi fi-rr-phone-guide neon-icon "
                     onClick={() =>
@@ -151,25 +156,10 @@ function Landing({ hamb }) {
             )}
 
             <motion.img
-            loading="lazy"
+              loading="lazy"
               src={Plus}
               alt="plus"
-              className="w-[150px] absolute top-0 right-[250px]"
-              animate={{
-                // x: [0, 40, -40, 0], // Move right, then left, then back
-                y: [0, 10, -10, 0], // Move up, then down, then back
-              }}
-              transition={{
-                duration: 4, // Smooth animation over 4 seconds
-                repeat: Infinity, // Infinite loop
-                ease: "easeInOut", // Smooth in and out motion
-              }}
-            />
-            <motion.img
-            loading="lazy"
-              src={Hash}
-              alt="Hash"
-              className="w-[150px] absolute top-40 right-[360px]"
+              className=" plus landing_img w-[9.375em] absolute top-0 right-[15.625em]"
               animate={{
                 y: [0, 10, -10, 0],
               }}
@@ -180,10 +170,25 @@ function Landing({ hamb }) {
               }}
             />
             <motion.img
-            loading="lazy"
+              loading="lazy"
+              src={Hash}
+              alt="Hash"
+              className=" hash landing_img w-[9.375em] absolute top-[9.8em] right-[22.5em]"
+              animate={{
+                y: [0, 10, -10, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.img
+          
+              loading="lazy"
               src={Cube}
               alt="Cube"
-              className="w-[150px] absolute top-[300px] z-0 right-[150px] rotate-[50deg] "
+              className="cube landing_img w-[9.375em] absolute top-[18.75em] z-0 right-[9.375em] rotate-[50deg]"
               animate={{
                 y: [0, 10, -10, 0],
               }}

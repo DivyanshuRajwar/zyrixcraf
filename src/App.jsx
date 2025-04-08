@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className="w-screen h-screen overflow-x-hidden bg-stone-200">
-        <CursorDot />
+        <CursorDot  />
         {isLoading ? <Loader /> : (
           <Routes>
             <Route path="/" element={<Wrapper />} />
