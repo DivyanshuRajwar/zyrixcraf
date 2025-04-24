@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import webDev from "../assets/webDev.jpg";
-import graphics from "../assets/graphics.jpg";
-import uiUx from "../assets/ui-ux.jpg";
+import webDev from "../assets/webDev.webp";
+import graphics from "../assets/graphics.webp";
+import uiUx from "../assets/ui-ux2.webp";
 
 function Portfolio() {
   const navigate = useNavigate();
@@ -14,18 +14,18 @@ function Portfolio() {
     >
       {/* Heading */}
       <div className="w-full p-5 ">
-        <h2 className="text-5xl text-gray-500 font-bold ml-5 ">Portfolio</h2>
-        <p className="text-3xl mt-3 font-sans text-gray-500 max-w-4xl ml-6 ">
-          <span className="text-black font-bold">Showcasing</span> a blend of
+        <h2 className="text-4xl text-gray-500 font-bold ml-5 ">2. Portfolio</h2>
+        <p className="text-2xl mt-3 font-sans text-gray-500 max-w-4xl ml-6 ">
+          Showcasing a blend of
           creativity and functionality with stunning UI/UX designs that deliver
           seamless digital experiences.
         </p>
       </div>
 
       {/* Portfolio Categories */}
-      <div className="w-full flex flex-wrap justify-center gap-6 px-6">
+      <div className="w-full flex flex-wrap  justify-center gap-6">
         {/* Web Development */}
-        <div className="w-full md:w-[60%] h-[500px] relative overflow-hidden rounded-xl cursor-pointer shadow-xl">
+        <div className="w-full md:w-[60%] h-[500px] relative overflow-hidden rounded-2xl  shadow-xl">
           <img
           loading="lazy"
             src={webDev}
@@ -45,7 +45,9 @@ function Portfolio() {
             </p>
           </div>
           <button
-            onClick={() => navigate("/UiUx-Portfolio")}
+            onClick={() =>
+              window.open("https://e-commerce-site-vert-tau.vercel.app/", "_blank")
+            }
             className="absolute right-10 bottom-15 h-16 w-16 bg-[#b496966c] rounded-full flex justify-center items-center text-black font-bold text-xl hover:scale-[1.1] transition-all"
           >
             →
@@ -53,7 +55,7 @@ function Portfolio() {
         </div>
 
         {/* Graphic Design */}
-        <div className="w-full md:w-[35%] h-[500px] relative overflow-hidden rounded-xl cursor-pointer shadow-xl">
+        <div className="w-full md:w-[38%] h-[500px] relative overflow-hidden rounded-2xl cursor-pointer shadow-xl">
           <img
             src={graphics}
             alt="Graphic Design"
@@ -93,7 +95,9 @@ function Portfolio() {
             apps.
           </p>
           <button
-            onClick={() => navigate("/UiUx-Portfolio")}
+            onClick={() =>
+              window.open("https://ui-ux-ruddy.vercel.app/", "_blank")
+            }
             className="absolute right-5 top-5 h-16 w-16 bg-[#b496966c] rounded-full flex justify-center items-center text-black font-bold text-xl hover:scale-[1.1] transition-all"
             aria-label="View UI/UX Portfolio"
           >

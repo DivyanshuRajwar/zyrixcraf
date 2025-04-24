@@ -1,16 +1,22 @@
 @import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 
 body{
     font-family: poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    overflow: auto;
     ::-webkit-scrollbar {
         display: none;
       }
       
 }
+
+
 .neon-icon {
   font-size: 30px;  
   display: inline-flex;
@@ -36,5 +42,5 @@ body{
 .neon-icon:hover {
   transform: scale(1.05);  
   color:white;
-  background: rgba(7, 7, 7, 0.486); /* Subtle color change */
+  background: rgba(7, 7, 7, 0.486); 
 }

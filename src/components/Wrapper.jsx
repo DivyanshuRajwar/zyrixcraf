@@ -10,59 +10,58 @@ import DataCompo from "./DataCompo";
 import LatestCases from "./LatestCases";
 import ClientHome from "./ClientHome";
 import OurTeam from "./OurTeam";
+import HandCompo from "./HandCompo";
 import "../styles/Responsive.css";
 function Wrapper() {
   const [overlayOn, setOverlay] = useState(false);
   const [hamb, setHamb] = useState(false);
   const [uiUx, setUiUx] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const [inHomeSection, setInHomeSection] = useState(false);
+  
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setInHomeSection(scrollY < window.innerHeight);
+      if (window.scrollY > window.innerHeight * 0.9) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
-  
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // run once on mount to set the initial state
-  
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-stone-200 relative">
+    <div className="w-full h-100vh flex flex-col items-center bg-stone-200 relative">
       {/* Sticky Header */}
       <div
         id="Wrapper_head"
         className="fixed top-[0.25em] right-[5%] w-[22em] h-[5em] flex justify-between pr-[1.25em] items-center z-50 gap-[2.5em] transition-all duration-300"
       >
         <div
-          onClick={() => setOverlay(!overlayOn)}
-          className="btn w-[50%] bg-[#d8d2d294] flex rounded-full py-[0.75em] px-[0.75em] text-[1.125em] hover:cursor-pointer font-bold
-            hover:bg-blue-600 hover:text-white hover:font-bold transition-all duration-300 ease-in-out"
-        >
-          Become a Client
-        </div>
-        <div className="hamb w-[3.75em] h-[3.75em] rounded-full bg-[#cfc4c48e] backdrop-blur-lg shadow-lg flex items-center justify-center border border-white/20">
+      onClick={() => setOverlay(!overlayOn)}
+      className={`btn w-[50%] flex rounded-full py-[0.75em] px-[0.75em] text-[1.125em] font-bold transition-all duration-400 ease-in-out hover:cursor-pointer 
+        ${scrolled ? 'bg-blue-600 text-white' : 'bg-[#d8d2d294] hover:bg-blue-600 hover:text-white'}`}
+    >
+      Become a Client
+    </div>
+
+        <div onClick={() => setHamb(!hamb)} className="hamb cursor-pointer w-[3.75em] h-[3.75em] rounded-full bg-[#cfc4c48e] backdrop-blur-lg shadow-lg flex items-center justify-center border border-white/20 pt-2">
           {hamb ? (
             <i
-              onClick={() => setHamb(!hamb)}
+              
               className="fi fi-br-cross text-[1.5em] text-black cursor-pointer"
             ></i>
           ) : (
             <i
-              onClick={() => setHamb(!hamb)}
+              
               className="fi fi-br-bars-staggered text-[1.5em] text-black cursor-pointer"
             ></i>
           )}
         </div>
         {hamb ? (
-          <div className={`nav_option z-50 font-sans transition-all duration-500 ${
-            inHomeSection
-              ? "fixed top-[130px] right-8" 
-              : "vertical-icons"           
-          }`}
+          <div className={`nav_option z-50 font-sans transition-all duration-500 fixed top-[130px] right-8`}
         >
             <span className="absolute right-[6.1em] top-[1.463em] text-[1.563em] hover:cursor-pointer hover:scale-[1.1] transition-all duration-300">
               <i
@@ -126,12 +125,12 @@ function Wrapper() {
       <ShowCase overlayOn={overlayOn} setOverlay={setOverlay} />
       <ShowCase2 />
       <Portfolio />
-      <DataCompo />
       <LatestCases />
       <OurTeam />
       <Footer overlayOn={overlayOn} setOverlay={setOverlay} />
 
       {overlayOn && <ClientHome setOverlay={setOverlay} />}
+   
     </div>
   );
 }

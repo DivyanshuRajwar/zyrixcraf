@@ -85,7 +85,7 @@ const ClientHome = ({ setOverlay }) => {
             <div
               onClick={() =>
                 window.open(
-                  "https://www.linkedin.com/in/zyrixcraft-in-11b338359/",
+                  "https://www.linkedin.com/company/zyrixcraft/posts/?feedView=all",
                   "_blank"
                 )
               }
@@ -117,7 +117,7 @@ const ClientHome = ({ setOverlay }) => {
       onClick={() => setOverlay()}
       size={24}
       color="black"
-      className="size-10 text-white absolute right-10 flex justify-center items-center rounded-full hover:scale-[1.1] hover:cursor-pointer hover:bg-black hover:text-white transition-all duration-500 ease-in-out"
+      className="size-10 text-white absolute right-10 flex justify-center items-center rounded-full hover:scale-[1.1] hover:cursor-pointer hover:bg-gray-500  transition-all duration-500 ease-in-out"
     />
 
     <h2 className="text-5xl" id="contact-heading">Let's get in touch</h2>

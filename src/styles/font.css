@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+
+.epic-font {
+  font-family: 'Moirai One', system-ui, sans-serif;
+  font-size: 8.56em;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-Delius {
+  font-family: 'Autour One', system-ui, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  line-height: 1.2;
+  font-size: 6em;
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

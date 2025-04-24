@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import img1 from "../assets/ansh.jpg";
-import img4 from "../assets/gaurav.jpg";
-import img2 from "../assets/divyanshu.jpg";
-import img3 from "../assets/sachin.png";
-import img5 from "../assets/adarsh.jpg";
-import img6 from "../assets/rohit.jpg";
-import img7 from "../assets/sofia.png";
+import img1 from "../assets/ansh.webp";
+import img4 from "../assets/gaurav.webp";
+import img2 from "../assets/divyanshu.webp";
+import img3 from "../assets/sachin.webp";
+import img5 from "../assets/adarsh.webp";
+import img6 from "../assets/rohit.webp";
+import img7 from "../assets/sofia.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const OurTeam = () => {
@@ -65,14 +65,14 @@ const OurTeam = () => {
   return (
     <div
       id="team"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-6 md:gap-9 text-white p-4 md:p-10 bg-[#070129]  relative overflow-hidden"
+      className="w-full min-h-screen flex flex-col justify-center  gap-6 md:gap-9 text-white p-4 md:p-10 bg-[#0A0A0A]  border-none relative overflow-hidden"
     >
-      <div className="text-center w-full">
-        <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-5">Our Team</h1>
+      <div className=" w-full">
+        <h1 className="text-4xl text-gray-400 px-4 md:text-4xl font-bold ">4. Our Team</h1>
       </div>
       
-      <div className="text-center w-full max-w-3xl px-4  ">
-        <p className="text-lg md:text-xl">
+      <div className="w-full max-w-5xl   ">
+        <p className="text-2xl md:text-2xl px-6 text-gray-400">
           Meet our talented team of professionals dedicated to delivering the best results. Our innovative team ensures creativity, technical expertise, and strategic marketing to elevate your brand.
         </p>
       </div>
@@ -125,15 +125,16 @@ const OurTeam = () => {
         <div className="flex justify-center space-x-6">
           {getVisibleTabletCards().map((member, index) => (
             <motion.div 
-              key={`tablet-${tabletIndex}-${index}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0, y: [0, -10, 0] }}
-              transition={{ 
-                opacity: { duration: 0.5 },
-                y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-              }}
-              className={`relative flex flex-col items-center ${member.bg} rounded-[80px] shadow-xl w-36 h-80 text-black overflow-hidden`}
-            > 
+            key={`tablet-${tabletIndex}-${index}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: [0, -10, 0] }}
+            transition={{ 
+              opacity: { duration: 0.5 },
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+            }}
+            className={`relative flex flex-col items-center ${member.bg} rounded-[80px] shadow-xl w-36 h-80 text-black overflow-hidden`}
+          >
+          
               <div className="absolute top-6 flex flex-col items-center">
                 <h2 className="font-semibold text-lg">{member.name}</h2>
                 <p className="text-black text-sm">{member.role}</p>

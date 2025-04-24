@@ -17,14 +17,14 @@ const Footer = ({ overlayOn, setOverlay }) => {
     { icon: FaWhatsapp, link: "https://wa.me/919711625392" },
     {
       icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/zyrixcraft-in-11b338359/",
+      link: "https://www.linkedin.com/company/zyrixcraft/posts/?feedView=all",
     },
   ];
 
   return (
-    <footer className="w-screen bg-white   flex justify-center  items-center font-[Poppins] relative z-0 pt-[80px]">
+    <footer id="footer"  className="w-screen bg-white   flex justify-center  items-center font-[Poppins] relative z-0 pt-[80px]">
       {/* Mobile Version */}
-      <div className="md:hidden p-6 flex flex-col space-y-6">
+      <div id="footer" className="md:hidden p-6 flex flex-col space-y-6">
         <div>
           <h2 className="text-3xl font-bold mb-2 text-gray-900">
             We would love to hear from you.
@@ -63,8 +63,8 @@ const Footer = ({ overlayOn, setOverlay }) => {
             </p>
             <p>
               <span className="text-gray-600">Phone:</span>{" "}
-              <a href="tel:+19971162539" className="text-blue-600">
-                +19 97116 25392
+              <a href="tel:+91971162539" className="text-blue-600">
+                +91 97116 25392
               </a>
             </p>
             <p className="text-gray-600">
@@ -82,6 +82,7 @@ const Footer = ({ overlayOn, setOverlay }) => {
                   <p key={index}>
                     <a
                       href={item.link}
+                      target="_blank"
                       className="text-gray-600 flex items-center"
                     >
                       <item.icon className="mr-2" />
@@ -150,7 +151,7 @@ const Footer = ({ overlayOn, setOverlay }) => {
       </div>
 
       {/* Tablet Version */}
-      <div className="hidden lg:hidden md:block py-12 px-8 bg-gray-50">
+      <div id="footer" className="hidden lg:hidden md:block py-12 px-8 bg-gray-50">
         <div className="grid md:grid-cols-2 gap-10 mb-12">
           <div>
             <h1 className="text-3xl font-bold mb-4 text-gray-900">
@@ -186,8 +187,8 @@ const Footer = ({ overlayOn, setOverlay }) => {
                   </p>
                   <p>
                     <span className="text-gray-600">Phone:</span>{" "}
-                    <a href="tel:+19971162539" className="text-gray-600">
-                      +19 97116 25392
+                    <a href="tel:+91971162539" className="text-gray-600">
+                      +91 97116 25392
                     </a>
                   </p>
                   <p className="text-gray-600 max-w-xs">
@@ -256,7 +257,7 @@ const Footer = ({ overlayOn, setOverlay }) => {
                     <span className="mr-2">
                       <item.icon />
                     </span>
-                    <a href={item.link} className="text-gray-600">
+                    <a href={item.link} target="_blank" className="text-gray-600">
                       {item.icon === FaInstagram
                         ? "Instagram"
                         : item.icon === FaGithub
@@ -290,7 +291,7 @@ const Footer = ({ overlayOn, setOverlay }) => {
       </div>
 
       {/* Desktop Version */}
-      <div className="hidden lg:block mb-[5em]  ">
+      <div id="footer" className="hidden lg:block mb-[5em]  ">
         <div className="w-[80em] flex justify-between mb-16  ">
           <div className="max-w-md">
             <h1 className="text-4xl font-bold mb-4 text-gray-900">
@@ -325,8 +326,8 @@ const Footer = ({ overlayOn, setOverlay }) => {
                 </p>
                 <p>
                   <span className="text-gray-600">Phone:</span>{" "}
-                  <a href="tel:+19971162539" className="text-gray-600">
-                    +19 97116 25392
+                  <a href="tel:+91971162539" className="text-gray-600">
+                    +91 97116 25392
                   </a>
                 </p>
                 <p className="text-gray-600 max-w-xs">
@@ -348,7 +349,7 @@ const Footer = ({ overlayOn, setOverlay }) => {
                     <span className="mr-2">
                       <item.icon />
                     </span>
-                    <a href={item.link} className="text-gray-600">
+                    <a href={item.link} target="_blank" className="text-gray-600">
                       {item.icon === FaInstagram
                         ? "Instagram"
                         : item.icon === FaGithub

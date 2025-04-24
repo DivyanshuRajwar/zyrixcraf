@@ -6,7 +6,7 @@ const Marque = () => {
     <div className="w-full h-[200px] overflow-hidden py-2 flex">
       
         <motion.div
-          className="whitespace-nowrap text-9xl font-semibold text-[#3330f1be] font-[Poppins]"
+          className="b whitespace-nowrap text-9xl font-semibold text-[#3330f1be] font-[Poppins]"
           animate={{ x: ["0%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 80, ease: "linear" }}
         >

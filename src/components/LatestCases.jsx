@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Search, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import mobileDev from '../assets/mobileDev.webp'
-import Ecomm from '../assets/Ecomm.jpg'
+import Ecomm from '../assets/Ecomm.webp'
 const cases = [
   {
     id: 1,
@@ -84,8 +84,11 @@ const LatestCases = () => {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 gap-6 sm:gap-0">
           <div>
-            <h2 className="text-gray-400 mb-2">Our Portfolio</h2>
-            <h1 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Latest Cases</h1>
+            
+          <h3 className="text-4xl text-gray-400 font-bold"> 3. Latest Cases</h3>
+          <p className="text-2xl mt-3 font-sans text-gray-500 max-w-4xl  ">
+          Delivering smart, user-friendly solutions with seamless functionality and modern design.
+        </p>
           </div>
           
           <div className="relative w-full sm:w-auto">
@@ -142,19 +145,19 @@ const LatestCases = () => {
             <div className="flex gap-4">
               <button
                 onClick={() => scroll('left')}
-                className="p-2 rounded-full border border-gray-800 hover:border-gray-600 transition-colors bg-black/40 backdrop-blur-sm"
+                className="p-2 rounded-full border border-gray-800 hover:border-gray-600 transition-colors bg-black/40 backdrop-blur-sm hover:cursor-pointer"
               >
                 <ChevronLeft size={24} />
               </button>
               <button
                 onClick={() => scroll('right')}
-                className="p-2 rounded-full border border-gray-800 hover:border-gray-600 transition-colors bg-black/40 backdrop-blur-sm"
+                className="p-2 rounded-full border border-gray-800 hover:border-gray-600 transition-colors bg-black/40 backdrop-blur-sm hover:cursor-pointer"
               >
                 <ChevronRight size={24} />
               </button>
             </div>
 
-            <button className="bg-black/40 backdrop-blur-sm hover:bg-black/60 text-white px-6 py-2 rounded-full flex items-center gap-2 transition-colors border border-gray-800/20">
+            <button className="bg-black/40 backdrop-blur-sm hover:bg-black/60 text-white px-6 py-2 rounded-full flex items-center gap-2 transition-colors border border-gray-800/20 hover:cursor-pointer ">
               View All Cases
               <ArrowRight size={20} />
             </button>

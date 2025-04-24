@@ -11,107 +11,26 @@ import iphone09 from "../assets/09.webp";
 import iphone10 from "../assets/10.webp";
 import iphone11 from "../assets/11.webp";
 import iphone12 from "../assets/12.webp";
-import Hand from "../assets/hand.webp";
-import '../styles/Responsive.css'
-import HandCompo from "./HandCompo";
+import "../styles/Responsive.css";
 
 function ShowCase2() {
   return (
-    <div className="phone-compo w-screen h-auto  flex flex-col gap-5 justify-start pb-4 items-center text-white relative bg-black ">
-        
-     
+    <div className="w-full relative bg-green-700 py-10">
+      <div className="sticky top-7 z-10 w-[200px] h-[100px] bg-red-400 text-white text-center text-xl flex items-center justify-center shadow-lg">
+        I am Sticky
+      </div>
 
-        <div className="handCompo min-w-full min-h-full absolute top-[-23px] ">
-            <HandCompo />
-        </div>
-      <div className="flex flex-col gap-5">
-        <div className="iphone-container flex w-screen gap-4 justify-center ">
-          <img
-          loading="lazy"
-            src={iphone01}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <img
-          loading="lazy"
-
-            src={iphone02}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <div className="laptop_space w-[290px] h-[570px]"></div>
-          <img
-          loading="lazy"
-            src={iphone03}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <img
-          loading="lazy"
-            src={iphone04}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-        </div>
-
-        <div className="iphone-container flex w-screen gap-4 justify-center">
-          <img
-          loading="lazy"
-            src={iphone05}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <img
-          loading="lazy"
-            src={iphone06}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <div className="laptop_space w-[290px] h-[570px]"></div>
-          <img
-          loading="lazy"
-            src={iphone07}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <img
-          loading="lazy"
-            src={iphone08}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-        </div>
-
-        <div className="iphone-container flex w-screen gap-4 justify-center">
-          <img
-          loading="lazy"
-            src={iphone09}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <img
-          loading="lazy"
-            src={iphone10}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <div className="laptop_space w-[290px] h-[570px]"></div>
-          <img
-          loading="lazy"
-            src={iphone11}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-          <img
-          loading="lazy"
-            src={iphone12}
-            alt=""
-            className="iphone w-[300px] h-[590px] rounded-4xl"
-          />
-        </div>
+      <div className="mt-20 flex flex-col gap-10">
+        {/* Lots of dummy content to allow scroll */}
+        {Array.from({ length: 10 }).map((_, i) => (
+          <div key={i} className="h-[200px] bg-white text-black rounded-xl shadow p-4 mx-auto w-[80%]">
+            Section {i + 1}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
+
 
 export default ShowCase2;

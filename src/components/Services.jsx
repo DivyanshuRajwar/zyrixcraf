@@ -1,6 +1,6 @@
 import React from "react";
 import webPic from "../assets/web.avif";
-import uiUx from "../assets/ui-ux.avif";
+import uiUx from "../assets/ui-ux1.avif";
 import graphic from "../assets/graphics.avif";
 import '../App.css'
 function Services({ overlayOn, setOverlay }) {
@@ -13,8 +13,8 @@ function Services({ overlayOn, setOverlay }) {
       bg-gradient-to-br from-gray-100 to-gray-300 border-none mb-2"
     >
       <div id="services-header" className="w-full h-[30%] p-5">
-        <h3 className="text-4xl text-gray-400 font-bold">Our Services</h3>
-        <h2 className="text-4xl mt-3 font-sans w-[1000px] text-gray-400">
+        <h3 className="text-4xl text-gray-400 font-bold"> 1. Our Services</h3>
+        <h2 className="text-2xl mt-3 font-sans w-[1000px] text-gray-400">
           We are a passionate team dedicated to designing stunning websites,
           captivating graphics, and seamless UI/UX experiences that leave a
           lasting impact.
@@ -34,7 +34,7 @@ function Services({ overlayOn, setOverlay }) {
             hover:bg-[#0c0c0cbe] hover:cursor-pointer transition-colors duration-300 ease-in-out"
           >
             <span id="card-heading"  className="text-[45px] font-bold">WEB  DEVELOPMENT</span>
-            <p className="mt-12 text-[18px] font-sans">
+            <p className="mt-25  text-[15px] font-sans">
               We craft responsive and unique web designs that captivate
               audiences, ensuring seamless performance across all devices. From
               SEO optimization to reliable hosting, we deliver complete digital
@@ -68,7 +68,7 @@ function Services({ overlayOn, setOverlay }) {
             hover:bg-[#0c0c0cbe] hover:cursor-pointer transition-colors duration-300 ease-in-out"
           >
             <span id="card-heading"  className="text-[45px] font-bold">UI/UX</span>
-            <p className="mt-[115px] text-[18px] font-sans">
+            <p className="mt-42 text-[15px] font-sans">
               We design intuitive and visually stunning UI/UX experiences that
               enhance user engagement across all devices. From seamless
               navigation to accessibility and performance, we create digital
@@ -103,7 +103,7 @@ function Services({ overlayOn, setOverlay }) {
             <span id="card-heading"  className="text-[45px] font-bold uppercase">
               graphic designs
             </span>
-            <p className="mt-12 text-[18px] font-sans">
+            <p className="mt-25 text-[15px] font-sans">
               We create visually compelling and unique graphic designs that
               captivate audiences and elevate your brand identity. From logos to
               marketing materials, we craft designs that blend creativity with

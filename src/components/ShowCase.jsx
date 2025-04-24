@@ -1,6 +1,6 @@
 import React from "react";
 import Iphone from "../assets/iphone01.png";
-import laptop from "../assets/laptop01.png";
+import laptop from "../assets/laptop01.webp";
 import { motion } from "framer-motion";
 function ShowCase({overlayOn,setOverlay}) {
   return (
