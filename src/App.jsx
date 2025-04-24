@@ -15,7 +15,7 @@ function App() {
  
   return (
     <Router>
-      <div className="w-screen min-h-screen overflow-x-hidden bg-stone-200">
+      <div className="w-screen min-h-screen   bg-stone-200">
         <CursorDot />
         {isLoading ? <Loader /> : (
           <Routes>

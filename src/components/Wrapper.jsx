@@ -33,7 +33,7 @@ function Wrapper() {
   }, []);
 
   return (
-    <div className="w-full h-100vh flex flex-col items-center bg-stone-200 relative">
+    <div className="w-full min-h-screen flex flex-col items-center bg-stone-200 relative">
       {/* Sticky Header */}
       <div
         id="Wrapper_head"
@@ -119,6 +119,7 @@ function Wrapper() {
         )}
       </div>
       {/* Main Content */}
+      
       <Landing hamb={hamb} />
       <Marque />
       <Services overlayOn={overlayOn} setOverlay={setOverlay} />
